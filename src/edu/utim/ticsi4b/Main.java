@@ -38,7 +38,7 @@ public class Main {
                             break;
                         }
                         if (decision == 2) {
-                            pilas.Cima( );//Manda a traer el valor cima de nuestra pila si esta tiene valores
+                            pilas.Cima();//Manda a traer el valor cima de nuestra pila si esta tiene valores
                             valido = true;break;
                         } else  System.out.println("Ingrese una opción númerica entre 1-2");    }
                     break;

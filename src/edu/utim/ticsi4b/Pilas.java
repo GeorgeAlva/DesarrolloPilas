@@ -5,15 +5,17 @@ package edu.utim.ticsi4b;
  */
 public class Pilas {
     private Nodo top;
-
+    private int tamaño;
     public  Pilas(){
         top = null;
+        tamaño = 0;
     }
+    public int getTamaño() {return tamaño;}
     public boolean vacia(){
         return (top== null);
     }
 //Método parea insertar
-    public  void push (int valor){
+    public  void Push (int valor){
         Nodo nuevoNodo;
         if(vacia())
             top= new Nodo (valor);
@@ -22,9 +24,10 @@ public class Pilas {
             nuevoNodo.setProx(top);
             top = nuevoNodo;
         }
+        tamaño++;
     }
     //Método para mostrar
-    public  void  peek (){
+    public  void  Peek (){
         Nodo temp = top;
         if(temp!=null){
             System.out.println("La pila es: ");
@@ -37,7 +40,7 @@ public class Pilas {
             System.out.println("PILA VACÍA");
     }
     //Método buscar
-    public  void cima(){//buscar
+    public  void Cima(){//buscar
         if(!vacia())
             System.out.println("Cima: "+top.getValor());
         else
@@ -45,11 +48,12 @@ public class Pilas {
     }
     //Método para borrar
 
-    public  void pop(){
+    public  void Pop(){
         if (!vacia()){//extraer
 
             System.out.println("Dato extraido: "+top.getValor());
             top = top.getProx();
+            tamaño--;
         }
         else
             System.out.println("La pila esta vacía");
