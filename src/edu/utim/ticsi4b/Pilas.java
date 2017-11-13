@@ -23,7 +23,7 @@ public class Pilas {
             top = nuevoNodo;
         }
     }
-    //Método para mosntrar
+    //Método para mostrar
     public  void  peek (){
         Nodo temp = top;
         if(temp!=null){
