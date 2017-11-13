@@ -62,7 +62,5 @@ public class Main {
             }
         }while (opcion!=8);//Si el usuario digita 8 sale del ciclo
     }
-
-
 }
 

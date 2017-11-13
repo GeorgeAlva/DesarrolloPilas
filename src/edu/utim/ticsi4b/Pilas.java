@@ -10,11 +10,27 @@ public class Pilas {
         top = null;
         tamaño = 0;
     }
+
     public int getTamaño() {return tamaño;}
     public boolean vacia(){
         return (top== null);
     }
-//Método parea insertar
+//Método buscar por índice
+    public void buscarIndice(int indice){
+        if(!vacia()) {//Si la pila no es vacía entra al índice
+            Nodo temp = top;//Crea una copia de la pila por una auxiliar temporal
+            if (indice >= 0 && indice <= tamaño) {//Si el índice se encuentra entre el tamaño de la pila entra al if
+                for (int i = 0; i < indice; i++) {//Mientras el valor del índice se encuentre en la pila hace el for
+                    temp=temp.getProx( );//Avanza de posicion en la pila
+                }
+                System.out.println("El indice " + indice + " es igual a :");
+                System.out.println(temp.getValor( ));//Representa el último valor encontrado en el auxiliar
+            } else System.out.println("Ese indice no se encuentra dentro de la pila");
+        }else
+            System.out.println("La pila no tiene valores");
+    }
+
+    //Método parea insertar
     public  void Push (int valor){
         Nodo nuevoNodo;
         if(vacia())
@@ -39,6 +55,7 @@ public class Pilas {
         else
             System.out.println("PILA VACÍA");
     }
+
     //Método buscar
     public  void Cima(){//buscar
         if(!vacia())
