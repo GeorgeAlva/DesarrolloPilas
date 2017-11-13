@@ -54,6 +54,37 @@ public class Pilas {
         else
             System.out.println("La pila esta vacía");
     }
-
+    //Método para obtener el valor máximo
+    public void Maxi() {
+        Nodo temp = top; //Crea una copia de la pila
+        int Max = temp.getValor(); //Variable de tipo int con valor en la primer posición de la pila
+        if (temp != null) { //condición para saber si la pila no está vacía
+            while (temp != null) { //ciclo para recorrer la pila
+                if (Max < temp.getValor()) { //condicion para comparar valor de la pocisión con el valor de la variable
+                    Max = temp.getValor(); // asignación del menor valor a la variable
+                }
+                temp = temp.getProx(); //siguinete posición de la pila
+            }
+            System.out.println("El valor máximo es: " + Max); //imprime el valor guardado en la variable
+        } else {
+            System.out.println("La pila esta vacia"); //imprime la pila está vacía
+        }
+    }
+    //Método para obtener el valor mínimo
+    public void Mini() {
+        Nodo temp = top; //Crea una copia de la pila
+        int Min = temp.getValor(); //Variable de tipo int con valor en la primer posición de la pila
+        if (temp != null) { //condición para saber si la pila no está vacía
+            while (temp != null) { //ciclo para recorrer la pila
+                if (Min > temp.getValor()) { //condicion para comparar valor de la pocisión con el valor de la variable
+                    Min = temp.getValor(); // asignación del menor valor a la variable
+                }
+                temp = temp.getProx(); //siguinete posición de la pila
+            }
+            System.out.println("El valor mínimo es: " + Min); //imprime el valor guardado en la variable
+        } else {
+            System.out.println("La pila esta vacia"); //imprime la pila está vacía
+        }
+    }
 }
 
